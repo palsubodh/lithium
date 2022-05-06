@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{   
+    margin:0 auto;}
+        #navbar{
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color:azure;
+            padding: 10px 10px 40px 10px;
+            align-items:baseline;
+            margin: auto;
+        }
+
+        #navbartwo{
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color:azure;
+            padding: 10px 200px 10px 200px;
+            align-items: center;
+           justify-content: space-between; 
+        }
+        #carticon{
+            width:  20px;
+            height: 10px;
+            margin-left: 10%;
+
+        }
+        #logo{
+            font-size: 40px;
+            width:  345px;
+            height: 37px;
+        }
+        #headerimg{
+            position: relative;
+            width: 100%;
+            height:500px;
+
+        }
+        #headimg{
+            position: absolute;
+            width: 100%;
+            height:500px;
+
+        }
+        #headertext{
+            position:absolute;
+            color:whitesmoke;
+            font-size: 50px;
+            padding: 130px 880px 30px 120px;
+
+        }
+        #headbtn{
+            position:absolute;
+            color:black;
+            font-size: 50px;
+           margin: 300px 880px 30px 120px;
+           width: 150px; 
+           height: 30px;
+           font-size: 20px;
+        }
+        .containerhead{
+
+            color:black;
+            font-size: 50px;
+            width: 100%;
+            justify-content: center;
+            display:flex;
+            align-items: center;
+            margin-top: 30px;
+            text-align: center ;
+
+        }
+
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+
+        }
+        #container>div{
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+
+        }
+        #prodimg{
+            width:80%;
+            height:400px;
+        }
+        .twoboard{
+        display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            width:100%;
+            margin-top: 50px;
+
+        }
+        .twoboard   >div{
+            margin: auto;
+            padding: 20px;
+
+
+        }
+        #boardimg{
+            width: 95% ;
+
+
+        }
+
+        .boardhead{
+            text-align: left;
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            font-size: 55px;
+        }
+        .boardbody{
+            font-size: 15px;
+            text-align: left;
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .boardbutton{
+           position:relative;
+           color:whitesmoke;
+           background-color: black;
+           font-size: 50px;
+           width: 200px; 
+           height: 30px;
+           font-size: 20px;
+           margin-left: 20.5%;
+        }
+        .blurb{
+        display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+           margin-left: 30px;
+           margin-right: 30px;
+            margin-top: 50px;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blurbtitle{
+            color:black;
+            font-size: 50px;
+            display:flex;
+            margin-top: 30px;
+            justify-content: center;
+            margin-bottom: 0px;
+        }
+        .blurbtitlesub{
+            color:black;
+            display:flex;
+            justify-content: center;
+        }
+        .blurbel{
+           margin: 20px 20px 20px 20px;
+            text-align: left;
+
+         }
+
+        .blurbimg{
+            width: 100%;
+
+        }
+        .blurbtext{
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            text-align: left;
+        }
+        .blurbcont{
+            font-size: 17px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .thefour{
+        display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+           display: flex;
+            margin-top: 50px;  
+            justify-content: center;
+            align-items: center;
+        }
+        .thefourele{
+            margin: 2px;
+            text-align: left;
+            flex-wrap: wrap;
+
+        }
+        .thefourimg{
+           width: 290px;
+           position: relative;
+           margin-bottom: 20px;
+        }
+        .thefourbtn{
+           color:whitesmoke;
+           background-color: black;
+           font-size: 50px;
+           width: 200px; 
+           height: 30px;
+           font-size: 20px;
+           margin: 10px 40% 10px 40%;
+        }
+        .thefourspaced{
+            width : 90%;
+       display:flex;
+       flex-wrap:wrap;
+       margin :auto;
+       Justify-Content:space-evenly;
+        }
+        .thefourspacedimg{ height:80%;
+        width: 100%;
+        height: 300px;
+       margin-bottom: 30px;
+        }
+        .thefourspacedele{
+
+        margin:10px;
+        text-align: center;
+        overflow:hidden;
+       height:500px;
+       width:300px;
+
+        }
+
+        .footer{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+         background-color: black;
+         color: whitesmoke;
+         justify-content:space-around;
+        align-items: center;
+        padding: 10px 30px 10px 30px ;
+        margin: auto;
+        flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+        }
+        .footerone{
+            margin:10px;
+        text-align: left;
+        overflow:hidden;
+       height:250px;
+       width:300px;
+            font-size: 15px;
+            line-height: 150%;
+        }
+        .footertwo{
+            margin:10px;
+        text-align: left;
+        overflow:hidden;
+       height:250px;
+       width:300px;
+            font-size: 15px;
+            line-height: 150%;
+        }
+        .footerthree{
+            margin:10px;
+        text-align: left;
+        overflow:hidden;
+       height:250px;
+       width:300px;
+            font-size: 15px;
+            line-height: 150%;
+        }
+        .nmfooter{
+            color: whitesmoke;
+            background-color: black;
+            width: 200px;
+            height:30px;
+            border: 1px solid whitesmoke;
+            margin-bottom: 10px;
+
+        }
+        .mobfooter{
+            color: whitesmoke;
+            background-color: black;
+            width: 200px;
+            height:30px;
+            border: 1px solid whitesmoke;
+            margin-bottom: 10px;
+        }
+        .subfooter{
+            color: whitesmoke;
+            background-color: black;
+            width: 200px;
+            height:30px;
+            border: 1px solid whitesmoke;
+            margin-bottom: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>Email Sign up</div>
+        <div></div>
+       <img id="logo" src=https://www.bobbibrowncosmetics.com/media/export/cms/logo.png>
+      <div id="carticon"><img src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Bag-White.svg"></div>
+      <div>Login</div></div>
+
+    <div id="navbartwo">
+        <div>Email Sign up</div>
+       <div>NEW</div>
+       <div>BESTSELLERS</div>
+       <div>FACE</div>
+       <div>MAKEUP</div>
+       <div>SKINCARE</div>
+       <div>VIRTUAL SERVICES</div>
+       <div>DISCOVER</div>
+    </div>
+
+    <div id="headerimg">
+     <img id="headimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/Homepage/SS22/SS22_LastBeautyEvent_VEEB_pc.jpg">
+     <div id="headertext"> 30% off on Vitamin Enriched Eye Base</div>
+     <button id="headbtn">Shop Now</button>
+    </div>
+    <div class="containerhead">GOTTA HAVE IT</Div>
+    <div id="contholder"></div>
+    <div></div>
+
+    <div class="twoboard">
+        <div class="boardone">
+            <h1 class="boardhead">Gift Mom On Time</h1>
+            <p class="boardbody">Mom's golden rule: don't be late. Order her gift using the
+                shipping timelines below or send a personalized eGift card.<br>
+                <br><br>
+                Standard Ground Service - Friday, April 29<br>
+                2-Day Air - Wednesday, May 4<br>
+                Overnight Air - Thursday, May 5</p>
+
+                <p class="boardbody">Standard Ground Service - Friday, April 29</p>
+                <button class="boardbutton">Shop the Gift Guide</button>
+
+        </div>
+        <div><img id="boardimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_MD_Shipping_pc.jpg"></div>
+    </div>
+
+
+
+    <h1 class="blurbtitle">THE POWER OF ASIAN BEAUTY</h1>
+   <p class="blurbtitlesub"> Join us as we celebrate Asian beauty all month long. Tune in to our Instagram Stories for a special-edition series featuring four Pretty Powerful women.</p>
+<div class="blurb">
+<div class="blurbel">
+    <img class="blurbimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_APAHM_pc_1.jpg"/>
+    <p class="blurbtext"> TIFFANY LEE</p>
+    <p class="blurbcont"> <b>Celebrity Hair and Makeup Artist <br> & Beauty Influencer</b></p><br>
+    <p class="blurbcont">  “I am starting to own myself and my unique features.”</p>
+</div>
+<div class="blurbel">
+    <img class="blurbimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_APAHM_pc_2.jpg"/>
+    <p class="blurbtext"> TIFFANY LEE</p>
+    <p class="blurbcont"> <b>Celebrity Hair and Makeup Artist <br> & Beauty Influencer</b></p><br>
+    <p class="blurbcont">  “I am starting to own myself and my unique features.”</p>
+</div>
+<div class="blurbel">
+    <img class="blurbimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_APAHM_pc_3.jpg"/>
+    <p class="blurbtext"> TIFFANY LEE</p>
+    <p class="blurbcont"> <b>Celebrity Hair and Makeup Artist <br> & Beauty Influencer</b></p><br>
+    <p class="blurbcont">  “I am starting to own myself and my unique features.”</p>
+</div>
+<div class="blurbel">
+    <img class="blurbimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_PrettyPowerful_APAHM_pc_4.jpg"/>
+    <p class="blurbtext"> TIFFANY LEE</p>
+    <p class="blurbcont"> <b>Celebrity Hair and Makeup Artist <br> & Beauty Influencer</b></p><br>
+    <p class="blurbcont">  “I am starting to own myself and my unique features.”</p>
+</div>
+
+</div>
+
+
+    <div class="twoboard">
+        <div><img id="boardimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/SS22/SS22_Golden_Hour_Glow_pc.jpg"></div>
+        <div class="boardone">
+            <h1 class="boardhead">SET FOR SPRING</h1>
+            <p class="boardbody">Our lightweight, breathable Sheer Finish Pressed Powder sets
+                foundation and stands up to shine as the weather warms up.<br>
+
+
+                <p class="boardbody"> </p>
+                <button class="boardbutton">Shop the Gift Guide</button>
+            </div>
+    </div>
+
+   <div class="containerhead"> #BOBBIBROWN  COMMUNITY</div>
+   <p class="blurbtitlesub">Looking fresh-faced? Let's see it. Mention @bobbibrown and tag #BobbiBrown to share.</p>
+    <div class="thefour">
+        <div class="thefourele">
+    <img class="thefourimg" src="https://z3photorankmedia-a.akamaihd.net/media/n/c/p/ncpssw4/mobile.jpg">
+        </div>
+     <div class="thefourele">
+    <img class="thefourimg" src="https://z3photorankmedia-a.akamaihd.net/media/n/c/p/ncpssw4/mobile.jpg">
+    </div>
+     <div class="thefourele">
+     <img class="thefourimg" src="https://z3photorankmedia-a.akamaihd.net/media/n/c/p/ncpssw4/mobile.jpg">
+    </div>
+    <div class="thefourele">
+    <img class="thefourimg" src="https://z3photorankmedia-a.akamaihd.net/media/n/c/p/ncpssw4/mobile.jpg">
+    </div>
+    </div>
+    <button class="thefourbtn">share your look</button>
+
+    <div class="thefourspaced">
+
+
+        <div class="thefourspacedele">
+    <img class="thefourspacedimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_03.jpg">
+    <div class="blurbtext">CHAT NOW </div><br>
+    <div class="blurbcont">Chat with a makeup artist to get product recommendations.</div>
+        </div>
+
+    <div class="thefourspacedele">
+    <img class="thefourspacedimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_05.jpg">
+     <div class="blurbtext">FREE SHIPPING</div><br>
+    <div class="blurbcont">Get free shipping on all orders $65+. Or join Bobbi Brown Club to get free  shipping on all orders.</div>
+      </div>
+
+ <div class="thefourspacedele">
+   <img class="thefourspacedimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_07.jpg">
+    <div class="blurbtext">WE WANT YOU TO LOVE IT </div><br>
+    <div class="blurbcont">That’s why we offer free shipping and returns on all foundations, correctors, concealers, and powders.</div>
+         </div>
+
+ <div class="thefourspacedele">
+    <img class="thefourspacedimg" src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_09.jpg">
+        <div class="blurbtext">CHAT NOW </div><br>
+     <div class="blurbcont">   Special somethings just for you.</div>
+     </div>
+
+
+    </div>
+    <div class="footer">
+
+        <div class="footer"></div>
+    </div>
+
+    <div class="footer">
+        <div class="footerone">
+        <div>
+           <b> NEED HELP? <br> <br></b>
+        </div>
+        <div>
+            Chat with an Artist <br> 
+             Text An Artist<br> 
+             Call Us (877)-310-9222<br> 
+              Shipping & Returns<br>
+              FAQS<br> 
+              Careers<br>
+        </div>
+    </div>
+
+
+    <div class="footertwo">
+        <div>
+           <b> My BOBBI BROWN <br> <br></b>
+        </div>
+        <div>
+            BB Access<br> 
+            My Account <br> 
+            My Orders<br> 
+              SStore Locator<br>
+        </div>
+    </div>
+
+    <div class="footerthree">
+        <div>
+           <b> My BOBBI BROWN <br> <br></b>
+        </div>
+        <div>
+            <form>
+                <input class="nmfooter" type="text" placeholder="Enter Your Email"/>
+                <input class="mobfooter" type="text" placeholder="Enter Your Mobile Phone"/>
+                <button class="subfooter" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
