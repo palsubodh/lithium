@@ -52,6 +52,114 @@ router.get('/movies',function(req,res){
   res.send(moviesData)
 })
 
+// Ques 2
+// router.get('/movies/:index',function(req,res){
 
 
+//   let moviesCollection = ["Rang de basanti", "The shining", "Lord of the ring", "Batman begins"]
+
+//   const Index = req.params.index
+//   res.send(moviesCollection[Index])
+  
+
+// })
+
+// ques 3  /
+
+router.get('/movies/:index',function(req,res){
+
+
+  let moviesCollection = ["Rang de basanti", "The shining", "Lord of the ring", "Batman begins"]
+
+  const Index = req.params.index
+  
+  if(Index>=moviesCollection.length)
+
+  {
+    res.send("use a valid index ")
+  }
+ else{
+  res.send(moviesCollection[Index])
+ }
+
+})
+
+
+
+//ques 4
+
+router.get('/films',function(req,res){
+  let filmsData = [ 
+  {
+    id : 1,
+  name : "The Shining"
+   }, 
+   {
+    id: 2,
+    name: "Incendies"
+   }, 
+   {
+    id: 3,
+    name: "Rang de Basanti"
+   }, 
+   {
+    id: 4,
+    name: "Finding Nemo"
+   },
+  {
+    id:5,
+    name : "chichore"
+  }]
+   
+   res.send(filmsData)
+})
+
+// ques 5 
+router.get('/films/:filmid',function(req,res){
+  let filmsData = 
+  [ 
+  {
+    id : 1,
+  name : "The Shining"
+   }, 
+   {
+    id: 2,
+    name: "Incendies"
+   }, 
+   {
+    id: 3,
+    name: "Rang de Basanti"
+   }, 
+   {
+    id: 4,
+    name: "Finding Nemo"
+   },
+  {
+    id:5,
+    name : "chichore"
+  }
+]
+   
+   let Filmindex = req.params
+  //  console.log(Filmindex)
+   let count=0
+   for(let i=0;i<filmsData.length;i++)
+   {
+       if(filmsData[i].id == Number(Filmindex.filmid))
+       { 
+          count++
+          res.send(filmsData[i])
+        }
+      
+   }
+   if(count==0)
+   {
+      res.send("No movie exists with this id")
+    
+   }
+   
+   
+})
 module.exports = router;
+
+
