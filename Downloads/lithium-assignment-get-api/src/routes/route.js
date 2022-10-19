@@ -16,7 +16,7 @@ const router = express.Router();
 // })
 
 // misssing from random
-router.get('/missing',function(req,res){
+router.get('/sol1',function(req,res){
   // console.log("This is my missing number",missingA.missinganywhere)
 
 
@@ -25,7 +25,7 @@ router.get('/missing',function(req,res){
         //console.log(N)
         var sum = N*(N+1);  // sum of n natural number = 5*(6)/2 30/2 =15
          sum=sum/2;
-         
+
         var output=0;
         
         for(var i=0;i<input.length;i++)
@@ -42,7 +42,7 @@ router.get('/missing',function(req,res){
 })
 
 // missingInterger
-router.get('/missingInt',function(req,res){
+router.get('/sol2',function(req,res){
   function missing(input){
     let N = input.length+1
     let first= input[0]
