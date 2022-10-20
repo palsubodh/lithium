@@ -160,4 +160,28 @@ router.post( "/post-query-2", function (req, res){
 })
 
 
+// *************************Assignment Date 20/10/2022****************************************************************
+
+router.post('/voting',function(req,res){
+
+    let arr =[]
+    let query = req.body.persons
+   let body=req.query.votingAge
+ 
+ for(let i=0;i<query.length;i++)
+ {
+    // persons[i].age>18 ? arr.push(persons[i]) : "no result"
+   
+    if(query[i].age>body)
+    {
+        query[i].votingStatus=true
+        arr.push(query[i])
+    }
+    
+  
+ } 
+ console.log(arr)
+    res.send(arr)
+})
+
 module.exports = router;
