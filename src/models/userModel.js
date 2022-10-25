@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema( {
     firstName: String,
     lastName: String,
     mobile: {
-        type: String,
+        type: String,  //+91
         unique: true,
         required: true
     },
@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema( {
         type: String,
         enum: ["male", "female", "LGBTQ"] //"falana" will give an error
     },
-    age: Number,
+    age: Number,  //21 25 "22"
     // isIndian: Boolean,
     // parentsInfo: {
     //     motherName: String,

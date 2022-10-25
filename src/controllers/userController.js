@@ -13,3 +13,9 @@ const getUsersData= async function (req, res) {
 
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
+
+// module.exports.All={createUser,getUsersData,}
+
+// let arr =[1,2,3,4,5]
+
+// let [a,b]=arr
