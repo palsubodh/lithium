@@ -13,7 +13,7 @@ router.get("/test-me", function (req, res) {
 // router.get("/getUsersData", BookController.getUsersData)
 
 
-router.post("/createBook", BookController.createBook  )
+router.post("/createBook", BookController.createBook)
 
 router.get("/booklist", BookController.bookList)
 router.post("/getBooksInYear",BookController.getBooksInYear)
