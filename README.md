@@ -1,7 +1,7 @@
 # TOPIC: Middleware2
 
 ## Request
-- Access headers
+- Access headers   // getHeaders
 - Set headers
 - Set attributes
 
