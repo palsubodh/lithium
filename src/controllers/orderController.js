@@ -87,7 +87,8 @@ const createOrder = async function(req,res){
             data.isFreeAppUser=true 
             const fetchOrder= await orderModel.create(data)
             res.send({msg:fetchOrder})
-        }else{
+        }
+        else{
             data.isFreeAppUser=false
             const userfetch= await userModel.findOne({_id:data.userId})
             let userbal= userfetch.balance
@@ -98,9 +99,8 @@ const createOrder = async function(req,res){
             let newbal= userbal - prodprice
             const userfetch= await userModel.findOneAndUpdate({_id:data.userId},{balance:newbal},{new:true})
             const fetchOrder= await orderModel.create(data)
-            res.send({msg:fetchOrder})
-            }
-            else{
+            res.send({msg:fetchOrder,update:userfetch})
+            }else{
                 console.log("doesn't have an enough balance in user collection")
                 res.send({msg:"doesn't have an enough balance in user collection"})
             }
